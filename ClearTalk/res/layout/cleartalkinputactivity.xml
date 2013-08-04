@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 
+	Input screen layout, by Elizabeth Davis
+	copyright 2012
+ -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <!-- File traversal at the top -->
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:id="@+id/file_traverse_container" >
+        
+        <!-- File traversal address bar at top -->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/file_traverse_nav" >
+            
+            <!-- Path -->
+	        <TextView
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:textColor="@color/white"
+	            android:textStyle="bold|italic"
+	            android:textSize="20dp"
+	            android:layout_marginLeft="4dp"
+	            android:singleLine="true"
+	            android:ellipsize="start"
+	            android:id="@+id/file_traverse_current"
+	            android:background="@color/black" />
+	        
+	        <!-- Up-button -->
+	        <Button 
+	            android:layout_width="45dp"
+	            android:layout_height="45dp"
+	            android:layout_marginRight="4dp"
+	            android:layout_marginLeft="4dp"
+	            android:id="@+id/file_traverse_back"
+	            android:background="@drawable/back_dir" />
+	        
+        </LinearLayout>
+        
+        <!-- The file list, should it be opened -->
+		<ListView
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical"
+		    android:layout_marginBottom="35dp"
+		    android:id="@+id/file_list" />
+		
+		<!-- Notice that there is nothing useful to be found -->
+		<TextView
+		    style="@style/nothing_here"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:paddingTop="4dp"
+		    android:paddingBottom="4dp"
+		    android:paddingLeft="2dp"
+		    android:paddingRight="2dp"
+		    android:textSize="18dp"
+		    android:gravity="center"
+		    android:layout_marginBottom="35dp"
+		    android:background="@color/content"
+		    android:id="@+id/file_traverse_nothing_here"
+		    android:text="@string/file_traverse_empty" />
+		
+		<!-- Close bar - should be at the bottom of file list -->
+		<LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:id="@+id/file_traverse_bottom_bar"
+		    android:gravity="center"
+		    android:orientation="horizontal"
+		    android:layout_marginTop="-35dp"
+		    android:paddingTop="7dp"
+		    android:paddingBottom="7dp"
+		    android:background="@drawable/file_traverse_gradient" >
+		    
+		    <TextView
+		        android:layout_height="wrap_content"
+		        android:layout_width="wrap_content"
+		        android:layout_marginRight="2dp"
+		        android:text="@string/middle_dots"
+		        android:textSize="16dp"
+		        android:textColor="@color/white" />
+		    
+		    <TextView
+		        android:layout_height="wrap_content"
+		        android:layout_width="wrap_content"
+		        android:layout_marginLeft="2dp"
+		        android:layout_marginRight="2dp"
+		        android:textColor="@color/white"
+		        android:textSize="16dp"
+		        android:textStyle="bold" 
+		        android:text="@string/file_traverse_close" />
+		    
+		    <TextView
+		        android:layout_height="wrap_content"
+		        android:layout_width="wrap_content"
+		        android:layout_marginLeft="2dp"
+		        android:text="@string/middle_dots"
+		        android:textSize="16dp"
+		        android:textColor="@color/white" />
+		    
+		</LinearLayout>
+		
+	</LinearLayout>	
+	
+	<ScrollView
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:background="@color/background"
+	    android:orientation="vertical"
+	    xmlns:android="http://schemas.android.com/apk/res/android">
+	    
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    	android:layout_width="fill_parent"
+	    	android:layout_height="wrap_content"
+	    	android:gravity="center"
+	    	android:background="@color/background"
+	    	android:orientation="vertical" >
+	
+	
+	    	<LinearLayout
+				android:layout_margin="20dp"
+	        	android:layout_width="fill_parent"
+	        	android:layout_height="fill_parent"
+	        	android:orientation="vertical"
+	        	android:layout_gravity="center"
+	        	android:background="@color/content"
+	        	android:padding="10dp" >
+	    
+	    		<TextView
+	        		android:layout_width="fill_parent"
+		        	android:layout_height="wrap_content"
+	    	    	android:gravity="center"
+	    	    	android:textSize="16dp"
+	    	    	android:textStyle="bold"
+	        		android:id="@+id/input_title"
+	        		android:textColor="@color/black" />
+	    		
+	    		<LinearLayout
+	    		    android:layout_width="wrap_content"
+	    		    android:layout_height="wrap_content"
+	    		    android:layout_marginTop="20dp"
+	    		    android:gravity="center"
+	    		    android:layout_gravity="center"
+	    		    android:orientation="horizontal" >
+	    		    
+	    		    <Button 
+	    		        android:id="@+id/text_in"
+	    		        android:layout_width="wrap_content"
+	    		        android:layout_height="40dp"
+	    		        android:gravity="center"
+	    		        android:text="@string/text_in"/>
+	    		    
+	    		    <Button 
+	    		        android:id="@+id/file_in"
+	    		        android:layout_width="wrap_content"
+	    		        android:layout_height="40dp"
+	    		        android:gravity="center"
+	    		        android:text="@string/file_in"/>  		    
+	    		    
+	    		</LinearLayout>
+		    
+	    		<EditText
+	    		    android:id="@+id/the_text"
+	    	    	android:inputType="textMultiLine"
+	    	    	android:singleLine="false"
+	    	    	android:gravity="top|left"
+	    	    	android:layout_width="fill_parent"
+	    	    	android:layout_height="wrap_content"
+	    	    	android:layout_marginTop="10dp"
+	    	    	android:minLines="10"
+	    	    	android:textSize="12dp"
+	    	    	android:textColor="@color/black" 
+	    	    	android:visibility="gone" />
+	    		
+	    		<EditText 
+	    		    android:id="@+id/the_file"
+	    		    android:inputType="none"
+	        		android:cursorVisible="false" 
+	        		android:clickable="false"
+	        		android:focusable="false" 
+	        		android:focusableInTouchMode="false"
+	    		    android:singleLine="true"
+	    		    android:gravity="center"
+	    		    android:layout_gravity="center"
+	    		    android:layout_height="wrap_content"
+	    		    android:layout_width="wrap_content"
+	    		    android:minWidth="100dp"
+	    		    android:layout_marginTop="10dp"
+	    		    android:paddingLeft="20dp"
+	    		    android:paddingRight="20dp"
+	    		    android:textSize="12dp"
+	    		    android:visibility="gone" />
+	    		
+	    		    
+	    		<Button
+	    		    android:id="@+id/select_lang"
+	    		    android:layout_width="wrap_content"
+	    		    android:layout_height="45dp"
+	    		    android:layout_marginTop="15dp"
+	    		    android:layout_marginBottom="15dp" 
+	    		    android:layout_gravity="center"
+	    		    android:gravity="center"
+	    		    android:text="@string/select_lang" />
+	
+		    	<LinearLayout
+		        	android:layout_width="fill_parent" 
+		        	android:layout_height="wrap_content" 
+		        	android:orientation="horizontal"
+		        	android:gravity="center">
+		        
+		    		<Button
+		    		    android:id="@+id/submit_input"
+		        		android:layout_width="wrap_content"
+		        		android:layout_height="35dp"
+		        		android:textSize="12dp"
+		        		android:gravity="center"
+		        		android:text="@string/submit_input" />
+		    	
+		    		<Button
+		    	    	android:id="@+id/cached_output"
+		    	    	android:layout_width="wrap_content"
+		    	    	android:layout_height="35dp"
+		    	    	android:textSize="12dp"
+		    	    	android:gravity="center"
+		    	    	android:text="@string/cached_out" />
+		        
+		    	</LinearLayout>
+		    	
+		    	<Button
+		    	   	android:id="@+id/input_help"
+		    	   	android:layout_width="60dp"
+		    	   	android:layout_height="35dp"
+		    	   	android:textSize="12dp"
+		    	   	android:layout_marginTop="15dp"
+		    	   	android:layout_gravity="center"
+		    	   	android:gravity="center"
+		    	   	android:text="@string/home_help" />
+		    	
+			</LinearLayout>
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>

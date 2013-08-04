@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 
+	POLLI strings document, by Elizabeth Davis
+	copyright 2012
+	
+	Some string values used throughout the app
+		
+ -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- General -->
+    <string name="title"><b>POLLI Mispronunciation Prediction</b></string>
+    <string name="app_name">POLLI</string> 
+    
+   	<!-- Colors -->    	
+    <color name="background">#AFDCEC</color>
+    <color name="content">#E7E7E7</color>
+    <color name="transparent">#00000000</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="fileBox">#8DBACA</color>
+
+    <!-- Home -->
+    	<!-- Buttons -->
+    	<string name="go_to_app">Go</string>
+    	
+    	<!-- Titles -->
+    	<string name="teacher_head"><b>For Teachers</b></string>
+    	<string name="student_head"><b>For Students</b></string>
+    	
+    	<!-- Blurbs -->
+    	<string name="general_blurb">POLLI, the POcket Language Learning, Interface, can help you practice your English pronunciation. Just type or import a piece of text that you\'ll be reading from, and, based on your native language, POLLI will point out words that you\'ll want to articulate carefully.</string>
+    	<string name="teacher_blurb">PoLLI, the Pocket Language Learning Interface, can help your students practice their English pronunciation. If you have a piece of text that you want your students to read, PoLLI will find places where students might make a meaningful pronunciation error based on their native language.</string>
+    	<string name="student_blurb">If you are preparing a presentation, PoLLI will find places where a mispronunciation could obscure the idea you want to convey based on your native language. Submit the text of what you want to say, and PoLLI will point out words you\'ll want to articulate carefully.</string>
+    
+    	    <!-- Style -->
+		    <style name="home_blurb" parent="android:TextAppearance">
+		        <item name="android:paddingBottom">10dp</item>
+		        <item name="android:textColor">@color/black</item>
+		        <item name="android:layout_width">fill_parent</item>
+		        <item name="android:layout_height">fill_parent</item>
+		        <item name="android:layout_weight">1</item>
+		        <item name="android:textSize">12dp</item>
+		        <item name="android:singleLine">false</item>
+		    </style>
+    
+    <!-- Input -->
+	    <!-- Buttons -->
+	    <string name="text_in">Enter Text</string>
+	    <string name="file_in">Import File</string>
+	    <string name="select_lang">Select Native Language</string>
+	    <string name="cached_out">Recent</string>
+	    <string name="submit_input">Submit</string>
+	    <string name="home_help">Help</string>
+	    
+	    <!-- Titles -->
+	    <string name="text_in_title">Type or paste your text into the box below</string>
+    	<string name="file_in_title">Select a file stored on your device</string>
+	    
+	    <!-- Dialog -->
+	    <string name="help_input">If you have some raw text that you want to analyze, click <b><i>Enter Text</i></b> and type or paste your text into the box on the screen. If your text is saved in a plain text file on your device, click <b><i>Import File</i></b> and locate your file using the navigation section that appears above. Select your native language by clicking <b><i>Select Language</i></b> and choosing from the list. Then click <b><i>Submit</i></b>, and your results will appear on the next page once processing is complete. Clicking <b><i>Recent</i></b> will show you the results of your most recent analyzed input.</string>
+    
+	    <!-- File traversal -->
+	    <string name="file_traverse_empty">No compatible files found</string>
+	    <string name="file_traverse_close">Close</string>
+	    <string name="middle_dots"> ··· </string>
+	    <string name="file_action">Open</string>
+	    
+	    	<!-- Styles -->
+	    	    <!-- folder path -->
+			    <style name="folder" parent="android:TextAppearance">
+			        <item name="android:textStyle">bold</item>
+			        <item name="android:textSize">18dp</item>
+			        <item name="android:textColor">@color/black</item>
+			    </style>
+			    
+			    <!-- file path -->
+			    <style name="file" parent="android:TextAppearance">
+			        <item name="android:textSize">18dp</item>
+			        <item name="android:textColor">@color/black</item>
+			    </style>
+			    
+			    <!-- Void element -->
+			    <style name="nothing_here" parent="android:TextAppearance">
+			        <item name="android:textSize">14dp</item>
+			        <item name="android:textColor">@color/black</item>
+			    </style>
+			    
+			    <!-- Buttons in bottom navigation part -->
+			    <style name="file_traverse_buttons" parent="@android:style/Widget.Button">
+			        <item name="android:layout_height">16dp</item>
+			        <item name="android:textSize">12dp</item>
+			        <item name="android:background">@color/transparent</item>
+			        <item name="android:textColor">@color/white</item>
+			        <item name="android:textStyle">bold</item>
+			        <item name="android:layout_marginLeft">2dp</item>
+			        <item name="android:layout_marginRight">2dp</item>
+			    </style>
+						    
+    <!-- Output -->
+    	<!-- Buttons -->
+    	<string name="edit_input">Edit Input</string>
+    	<string name="hint">Hints</string>
+    	
+    	<!-- Titles -->
+    	<string name="output_title_other">These words have been identified as potentially causing confusion if mispronounced</string>
+    	<string name="output_title_empty">No words have been identified as causing confusion if mispronounced</string>
+    	<string name="output_title_error">Error retrieving data</string>
+    	
+    	<!-- Descriptions -->
+    	<string name="output_description_nonempty">Click on a word to see the context it appears in and what listeners might hear by mistake</string>
+	    <string name="output_description_empty">You may want to practice reading over your text anyway to make certain that you are understood</string>  
+	    <string name="output_description_error">There was a problem in constructing your results</string>
+    	
+    	<!-- Dialog -->
+    	<string name="hints_output">Practice saying these sentences with a native English speaker or by recording yourself. If you find difficulty making yourself understood, consider rephrasing your sentence to avoid using that word.</string>
+    
+    	<!-- Styles -->
+    	    <!-- Minimal pair word in its sentence -->
+		    <style name="min_pair" parent="android:TextAppearance">
+		        <item name="android:textStyle">bold</item>
+		        <item name="android:textColor">@color/black</item>
+		    </style>
+		    
+		    <!-- Style for the minimal pair in the list view -->
+		    <style name="min_pair_parent" parent="android:TextAppearance">
+		        <item name="android:textStyle">bold</item>
+		        <item name="android:textColor">@color/black</item>
+		        <item name="android:textSize">18dp</item>
+		    </style>
+    
+</resources>

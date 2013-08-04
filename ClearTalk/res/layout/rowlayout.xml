@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+	Row layout, by Elizabeth Davis
+	copyright 2012
+	
+	Specifies the layout for a row in the file traversal document
+	
+ -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:background="@color/background"
+    android:gravity="center_horizontal">
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_gravity="center"
+        android:background="@color/content">
+        
+	    <ImageView
+	        android:id="@+id/icon"
+	        android:layout_width="28dp"
+	        android:layout_height="28dp"
+	        android:layout_marginLeft="4dp"
+	        android:layout_marginRight="10dp"
+	        android:src="@drawable/ic_launcher" />
+	    
+	    <TextView 
+	        android:id="@+id/label"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:gravity="left|center_vertical" />
+	    
+	</LinearLayout>
+</LinearLayout>
